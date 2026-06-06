@@ -1,0 +1,12 @@
+{
+  "buildCommand": "npx turbo run build --filter=@market-zap/web",
+  "installCommand": "npm ci",
+  "outputDirectory": "apps/web/.next",
+  "framework": "nextjs",
+  "crons": [
+    {
+      "path": "/api/cron/analyze",
+      "schedule": "*/5 * * * *"
+    }
+  ]
+}
