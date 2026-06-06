@@ -88,7 +88,7 @@ export async function POST(req: Request) {
 
   const start = Date.now();
   const signals = await runAnalysis(cfg);
-  for (const signal of signals) addSignal(signal);
+  for (const signal of signals) await addSignal(signal);
 
   const durationMs = Date.now() - start;
   console.log(`[analyze] Generated ${signals.length} signals in ${durationMs}ms`);
@@ -96,7 +96,7 @@ export async function POST(req: Request) {
   // Persist lastRunAt and totalSignals back to the agent store if an agent id was passed
   if (agentConfig?.id) {
     const now = new Date().toISOString();
-    upsertAgent({
+    await upsertAgent({
       ...agentConfig,
       id: agentConfig.id,
       name: agentConfig.name ?? "SoSo Signal Agent",

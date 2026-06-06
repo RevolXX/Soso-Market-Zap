@@ -57,7 +57,7 @@ if (isDev) {
     }
     try {
       const sigs = await runAnalysis(cfg);
-      for (const s of sigs) addSignal(s);
+      for (const s of sigs) await addSignal(s);
       if (sigs.length > 0) console.log(`[cron/analyze] Generated ${sigs.length} signals`);
     } catch (err) {
       console.error("[cron/analyze] Poll error:", err);
@@ -80,7 +80,7 @@ export async function GET() {
 
   const start = Date.now();
   const signals = await runAnalysis(cfg);
-  for (const signal of signals) addSignal(signal);
+  for (const signal of signals) await addSignal(signal);
   console.log(`[cron/analyze] Generated ${signals.length} signals in ${Date.now() - start}ms`);
 
   return NextResponse.json({
