@@ -1,0 +1,57 @@
+import type { Metadata, Viewport } from "next";
+import "@/styles/globals.css";
+import { Providers } from "@/components/layout/providers";
+import { Navbar } from "@/components/layout/navbar";
+import { Footer } from "@/components/layout/footer";
+import { Space_Grotesk, Outfit, JetBrains_Mono } from "next/font/google";
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space-grotesk",
+  display: "swap",
+});
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-outfit",
+  display: "swap",
+});
+
+const jetbrains = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains",
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  title: {
+    default: "Soso MarketZap — AI Signal-to-Execution Platform",
+    template: "%s | Soso MarketZap",
+  },
+  description: "AI-powered trading signal discovery powered by SoSoValue data and Groq AI.",
+  icons: [{ rel: "icon", url: "/favicon.svg", type: "image/svg+xml" }],
+};
+
+export const viewport: Viewport = {
+  themeColor: "#0a0e17",
+  width: "device-width",
+  initialScale: 1,
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={`${spaceGrotesk.variable} ${outfit.variable} ${jetbrains.variable} min-h-screen font-sans bg-background text-foreground`}
+      >
+        <Providers>
+          <div className="relative flex min-h-screen flex-col">
+            <Navbar />
+            <main className="relative z-[1] flex-1">{children}</main>
+            <Footer />
+          </div>
+        </Providers>
+      </body>
+    </html>
+  );
+}

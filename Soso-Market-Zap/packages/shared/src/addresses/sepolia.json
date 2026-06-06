@@ -1,0 +1,8 @@
+{
+  "MarketFactory": "0x55de9d7c5526d0b3389af86e94bbf836f9692cc1ffcef84d41793166975f644",
+  "ConditionalTokens": "0x76a3376361c46ec5c70c92725f91b17be48397c990f2c6f1b20ec6ecab5c8b2",
+  "CLOBExchange": "0x3dc610763ba8b70c96f0bbd29f108bb9e7cbcf5391fdfe9cd453b1586e9d6e",
+  "AdminResolver": "0x59a957bfb25c702c4622fca8a2207c6fc52a65dad2a6001141994cf3a7e1b3c",
+  "USDC": "0x782501e531c84662a23121bfaf8f3df67e3ed2ea566ebc94652bb211c72b2f5",
+  "CollateralVault": "0x52c7e1dbc9667a70f297c6c19c91d9886c1afce49045800714ab87fde35a0c"
+}

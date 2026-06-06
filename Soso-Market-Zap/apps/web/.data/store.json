@@ -1,0 +1,82 @@
+{
+  "signals": [
+    {
+      "id": "sig_mq1a7o1s_0517dbba_1",
+      "title": "Upcoming Macroeconomic Events Signal",
+      "description": "The provided data lacks specific details about the macroeconomic events, such as their nature (e.g., interest rate decisions, GDP reports) or forecasted values. However, based on typical market behavior, significant events like these can often impact crypto markets, particularly those closely correlated with traditional financial markets. Given the lack of detail, a neutral stance is taken with a focus on potential volatility around these dates.",
+      "sourceType": "macro_event",
+      "direction": "neutral",
+      "severity": "medium",
+      "confidence": 60,
+      "relatedAssets": [
+        "BTC",
+        "ETH"
+      ],
+      "relatedCurrencyIds": [
+        "bitcoin",
+        "ethereum"
+      ],
+      "currentPrice": 0,
+      "targetPrice": null,
+      "stopLoss": null,
+      "timeframe": "7d",
+      "evidence": {
+        "dataType": "Macroeconomic events",
+        "rawData": [
+          {
+            "date": "2026-06-08T00:00:00.000Z"
+          },
+          {
+            "date": "2026-06-09T00:00:00.000Z"
+          },
+          {
+            "date": "2026-06-10T00:00:00.000Z"
+          },
+          {
+            "date": "2026-06-16T00:00:00.000Z"
+          }
+        ]
+      },
+      "createdAt": "2026-06-05T18:52:50.944Z",
+      "acted": false,
+      "action": null,
+      "expiresAt": "2026-06-12T18:52:50.944Z",
+      "marketId": null
+    }
+  ],
+  "agents": [
+    {
+      "id": "agent-1",
+      "name": "SoSo Signal Agent",
+      "enabled": true,
+      "sources": [
+        "price_action",
+        "news_event",
+        "macro_event",
+        "index_divergence",
+        "sector_rotation",
+        "etf_flow"
+      ],
+      "monitoredAssets": [
+        "bitcoin",
+        "ethereum"
+      ],
+      "minConfidence": 60,
+      "pollIntervalSec": 300,
+      "autoCreateMarkets": false,
+      "autoCreateThreshold": 85,
+      "llmConfig": {
+        "provider": "groq",
+        "model": "mixtral-8x7b-32768",
+        "apiKey": "",
+        "temperature": 0.3,
+        "maxTokens": 1000
+      },
+      "totalSignals": 1,
+      "totalActions": 0,
+      "createdAt": "2026-06-05T18:47:09.181Z",
+      "updatedAt": "2026-06-05T18:52:55.280Z",
+      "lastRunAt": "2026-06-05T18:52:55.280Z"
+    }
+  ]
+}
